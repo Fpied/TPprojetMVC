@@ -1,0 +1,38 @@
+<?php
+
+require_once __DIR__ . '../config/Database.php';
+
+$pdo = Database::getConnexion();
+
+$sql = "";
+
+function retrieveAllUsers(){
+    $sql = "SELECT * FROM users";
+    return $sql;
+
+}
+
+function retrieveOneUSer($id){
+    $sql = "SELECT id FROM users";
+    return $sql;
+}
+
+function addUser($nom, $email){
+    $sql = "INSERT INTO users (nom, email) VALUES (:nom, :email)";
+    $return = "Utilisateur entré dans la bdd ";
+    return $return;
+}
+
+function modifyUser(string $nom,string $email){
+    $sql = "UPDATE SET nom = $nom, email = $email WHERE nom = $nom";
+    $return = "Utilisateur modifié";
+    return $return;
+
+
+}
+
+function deleteUser(string $nom){
+    $sql = "DELETE FROM users WHERE nom = $nom";
+
+
+}
