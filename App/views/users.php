@@ -18,6 +18,6 @@
     
     <?php endforeach; ?>
     </ul>
-    
+    <a href="index.php?controller=user&action=create">Creation de profils</a>
 </body>
 </html>
